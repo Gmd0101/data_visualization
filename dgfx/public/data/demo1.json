@@ -1,0 +1,20 @@
+{
+    "sales": [
+        {
+            "name": "寸衫",
+            "salesnum": 5
+        },
+        {
+            "name": "裤子",
+            "salesnum": 10
+        },
+        {
+            "name": "袜子",
+            "salesnum": 15
+        },
+        {
+            "name": "鞋子",
+            "salesnum": 20
+        }
+    ]
+}

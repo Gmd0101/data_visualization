@@ -1,0 +1,29 @@
+{
+    "state": "1",
+    "data": [
+        {
+            "classSum": "41081",
+            "class": "轿车及轻卡胎"
+        },
+        {
+            "classSum": "14741",
+            "class": "汽配"
+        },
+        {
+            "classSum": "7104",
+            "class": "其他"
+        },
+        {
+            "classSum": "6093",
+            "class": "卡客车胎"
+        },
+        {
+            "classSum": "654",
+            "class": "未分类"
+        },
+        {
+            "tagSum": "0",
+            "class": "其它类型之和"
+        }
+    ]
+}

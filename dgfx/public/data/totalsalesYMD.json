@@ -1,0 +1,20 @@
+{
+	"state": "1",
+	"data": {
+		"month": {
+			"sumOrder": "9040",
+			"sumPrice": "21388686.1",
+			"sumNum": "69673"
+		},
+		"year": {
+			"sumOrder": "9040",
+			"sumPrice": "21388686.1",
+			"sumNum": "69673"
+		},
+		"day": {
+			"sumOrder": "0",
+			"sumPrice": "0",
+			"sumNum": "0"
+		}
+	}
+}

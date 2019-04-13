@@ -1,0 +1,330 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    color:'#000';
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: #fff;
+    /*活动导航的颜色*/
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: #4da5ff;
+    /*非活动导航的颜色*/
+    height: 8px;
+    width: 8px;
+    margin: -4px 0 0 -4px;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    min-height: 635px;
+    font-family: 'microsoft yahei',Arial, sans-serif;
+    background-color: #0f1c30;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.fp-tableCell {
+    vertical-align: baseline;
+}
+.section{
+    background: url('../images/background-2.png') 50%;
+    /* border: 1px solid red; */
+}
+.section .header{
+    margin:0 auto;
+    width: 100%;
+    height: 55px;
+    /* background: url('../images/header01.png') center no-repeat; */
+    /* border: 1px solid black; */
+    /* border: 1px solid red; */
+}
+.section .header h3{
+    text-align: center;
+    font-size: 26px;
+    color: #5dc2fe;
+}
+.wrapper {
+    /* width: 100%;
+    height: auto; */
+    position:absolute;
+    top:60px;
+    bottom:0;
+    left:0;
+    right:0;
+    min-height:460px;
+}
+.container-fluid {
+    height:100%;
+    min-height:100%;
+}
+.row {
+    margin-left:-7px;
+    margin-right:-8px;
+}
+.row>div {padding-left:7px;padding-right:8px;}
+
+
+.xpanel-wrapper{
+    padding-bottom: 15px;
+    /* overflow: hidden; */
+}
+.xpanel-wrapper-1{
+    height: 66.666666%;
+}
+.xpanel-wrapper-2{
+    height: 50%;
+}
+.xpanel-wrapper-3,.xpanel-wrapper-4{
+    height: 33.33333%;
+}
+
+.xpanel{
+    padding: 15px;
+    margin-bottom:15px;
+    height: 100%;
+    /* min-height: 170px; */
+    background:url('../images/panel.png') center no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    /* border: 1px solid yellow; */
+}
+.xpanel-map{
+    height: 33.333333%;
+    /* border: 1px solid #000; */
+}
+.fill-h{
+    height: 100%;
+    min-height: 100%;
+    color: #fff;
+}
+
+#y-m-d-sales ul{
+    width: 100%;
+    height: 100%;
+}
+#y-m-d-sales ul li{
+    width: 100%;
+    height: 33.333333%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#y-m-d-sales ul li div{
+    width: 33.3333%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+#y-m-d-sales ul li div>span{
+    width: 100%;
+    text-align: center;
+    font: 24px bold;
+    font-family: 微软雅黑;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    /* background-color: #43d0d6; */
+}
+#y-m-d-sales ul li div span:nth-child(2){
+    font: 18px bold;
+}
+#y-m-d-sales ul li div span>span{
+    font-size: 16px;
+}
+
+.current-order-title h3,.salesman-title h3{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    font-family:微软雅黑;
+    color: #fff;
+}
+.salesman-title{
+    height: 30px;
+    width: 100%;
+    /* border:1px solid #fff; */
+}
+.current-order-list-title,.salesman-list-title{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+.current-order-list-title li,.salesman-list-title li{
+    width: 50%;
+    font: 18px bold;
+    text-align: center;
+    font-family: 微软雅黑;
+    color: #fff;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.salesman-list-title li{
+    width: 33.333333%;
+
+}
+.data-box{
+    width: 100%;
+    height: calc(100% - 68px);
+    overflow: hidden;
+    /* border: 1px solid #fff; */
+}
+.current-orders-list{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
+}
+.current-orders-list li{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+.current-orders-list li span{
+    width: 40%;
+    font: 16px bold;
+    text-align: center;
+    font-family: 微软雅黑;
+    color: #fff;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    /* border: 1px solid blue; */
+}
+.current-orders-list li span:nth-of-type(1){
+    /* border: 1px solid yellow; */
+    width: 60%;
+}
+.salesman-box{
+    width: 100%;
+    /* height: 100%; */
+    height: calc(100% - 50px);
+    overflow: hidden;
+    /* border: 1px solid #fff; */
+}
+.salesman-list-item{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid fuchsia; */
+}
+.salesman-list-item li{
+    width: 100%;
+    /* height: 40px; */
+    height:calc(100% / 10 );
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.salesman-list-item li span{
+    width: 33.3333333%;
+    font-size: 16px;
+    text-align: center;
+    font-family: 微软雅黑;
+    color: #fff;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+/* 媒体查询 */
+@media screen and (max-width: 1600px){
+    #y-m-d-sales ul{
+        width: 100%;
+        height: 100%;
+    }
+    #y-m-d-sales ul li{
+        width: 100%;
+        height: 33.333333%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    #y-m-d-sales ul li div{
+        width: 33.3333%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #y-m-d-sales ul li div>span{
+        width: 100%;
+        text-align: center;
+        font: 20px bold;
+        font-family: 微软雅黑;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    #y-m-d-sales ul li div span:nth-child(2){
+        font: 12px bold;
+    }
+    #y-m-d-sales ul li div span>span{
+        font-size: 12px;
+    }
+    .current-order-title h3,.salesman-title h3{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        font-family:微软雅黑;
+        color: #fff;
+    }
+    .current-order-list-title li,.salesman-list-title li{
+        width: 50%;
+        font: 16px bold;
+        text-align: center;
+        font-family: 微软雅黑;
+        color: #fff;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    .salesman-list-title li{
+        width: 33.333333%;
+    }
+    .current-orders-list li span{
+        width: 40%;
+        font: 16px bold;
+        text-align: center;
+        font-family: 微软雅黑;
+        color: #fff;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    .salesman-list-item li span{
+        width: 33.3333333%;
+        font-size: 16px;
+        text-align: center;
+        font-family: 微软雅黑;
+        color: #fff;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+}

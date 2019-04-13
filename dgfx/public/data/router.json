@@ -1,0 +1,36 @@
+{
+    "data": {
+        "router": [
+            {
+                "path": "/basic",
+                "name": "basic",
+                "component": "HelloWorld",
+                "redirect": "/basic/basicone",
+                "meta": {
+                    "title": "基础",
+                    "auth": true
+                },
+                "children": [
+                    {
+                        "path": "/basic/basicone",
+                        "name": "BasicOne",
+                        "component": "() => import('@/components/basic/BasicOne')",
+                        "meta": {
+                            "title": "基础一",
+                            "auth": true
+                        }
+                    },
+                    {
+                        "path": "/basic/basictwo",
+                        "name": "BasicTwo",
+                        "component": "() => import('@/components/basic/BasicTwo')",
+                        "meta": {
+                            "title": "基础二",
+                            "auth": true
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

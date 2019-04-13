@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="./CSS/dgfx.css">
+</head>
+
+<body>
+    <div id="dowebok">
+        <div class="section clearfloat">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="../物流信息/inventory.html">物流派送</a></li>
+                </ul>
+            </div>
+            <div class="wrapper wrapper-one">
+                <header class="header">
+                    <button class="side-btn is-closed">
+                        <span class="btn-top"></span>
+                        <span class="btn-middle"></span>
+                        <span class="btn-bottom"></span>
+                    </button>
+                    <h3 class="title"></h3>
+                </header>
+                <div class="main">
+                    <div class="container-fluid">
+                        <div class="row fill-h">
+                            <!-- 左侧 -->
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fill-h">
+                                <div class="xpanel-wrapper xpanel-wrapper-1">
+                                    <div class="xpanel">
+                                        <!-- 实时订单 -->
+                                        <div class="fill-h" id="current-order">
+                                            <div class="current-order-title">
+                                                <h3>实时订单</h3>
+                                            </div>
+                                            <ul class="current-order-list-title">
+                                                <li>名称</li>
+                                                <li>订单数量</li>
+                                            </ul>
+                                            <div class="data-box">
+                                                <ul class="current-orders-list"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xpanel-wrapper xpanel-wrapper-3">
+                                    <div class="xpanel">
+                                        <!-- 年月日销售统计 -->
+                                        <div class="fill-h" id="y-m-d-sales">
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <span class="daysumOrder statistics-num"></span>
+                                                        <span class="statistics-title">当日笔数</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="daysumNum statistics-num"></span>
+                                                        <span class="statistics-title">当日销售数</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="daysumPrice statistics-num"></span>
+                                                        <span class="statistics-title">当日金额</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <span class="monthsumOrder statistics-num"></span>
+                                                        <span class="statistics-title">当月笔数</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="monthsumNum statistics-num"></span>
+                                                        <span class="statistics-title">当月销售数</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="monthsumPrice statistics-num"></span>
+                                                        <span class="statistics-title">当月金额</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <span class="yearsumOrder statistics-num"></span>
+                                                        <span class="statistics-title">当年笔数</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="yearsumNum statistics-num"></span>
+                                                        <span class="statistics-title">当年销售数</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="yearsumPrice statistics-num"></span>
+                                                        <span class="statistics-title">当年金额</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 中间 -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 fill-h">
+                                <!-- style="overflow: hidden;" -->
+                                <div class="xpanel-wrapper xpanel-wrapper-1" style="overflow: hidden;">
+                                    <div class="mapbox" style="height: 300%;width:100%;">
+                                        <div class="xpanel xpanel-map">
+                                            <!-- 订单分布地图 -->
+                                            <div class="fill-h" id="order-map"></div>
+                                            <!-- <div class="fill-h" id="order-map" style="border:1px solid #fff;">2</div> -->
+                                        </div>
+                                        <div class="xpanel xpanel-map">
+                                            <!-- 实时订单地图 -->
+                                            <div class="fill-h" id="current-order-map"></div>
+                                            <!-- <div class="fill-h" id="order-map" style="border:1px solid #fff;">2</div> -->
+                                        </div>
+                                        <div class="xpanel xpanel-map">
+                                            <!-- 车辆派送地图 -->
+                                            <div class="fill-h" id="car-map"></div>
+                                            <!-- <div class="fill-h" id="order-map" style="border:1px solid #fff;">2</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xpanel-wrapper xpanel-wrapper-4">
+                                    <div class="xpanel">
+                                        <!-- 当月销售统计 -->
+                                        <div class="fill-h" id="month-sales"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fill-h">
+                                <div class="xpanel-wrapper xpanel-wrapper-3">
+                                    <div class="xpanel">
+                                        <!-- 品牌月销售 -->
+                                        <div class="fill-h" id="brand-pie"></div>
+                                    </div>
+                                </div>
+                                <div class="xpanel-wrapper xpanel-wrapper-3">
+                                    <div class="xpanel">
+                                        <!-- 城市销售前10 -->
+                                        <div class="fill-h" id="city-top-ten"></div>
+                                    </div>
+                                </div>
+                                <div class="xpanel-wrapper xpanel-wrapper-3">
+                                    <div class="xpanel">
+                                        <!-- 类型月销售 -->
+                                        <div class="fill-h" id="type-top-five"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section clearfloat">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="../物流信息/inventory.html">物流派送</a></li>
+                </ul>
+            </div>
+            <div class="wrapper wrapper-one">
+                <header class="header">
+                    <button class="side-btn is-closed">
+                        <span class="btn-top"></span>
+                        <span class="btn-middle"></span>
+                        <span class="btn-bottom"></span>
+                    </button>
+                    <h3 class="title"></h3>
+                </header>
+                <div class="main">
+                    <div class="container-fluid">
+                        <div class="row fill-h">
+                            <!-- 左侧 -->
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  fill-h">
+                                <div class="xpanel-wrapper xpanel-wrapper-2">
+                                    <div class="xpanel">
+                                        <div class="salesman-title">
+                                            <h3>英雄榜(客卡车胎)</h3>
+                                        </div>
+                                        <ul class="salesman-list-title">
+                                            <li>排名</li>
+                                            <li>姓名</li>
+                                            <li>当月销售总量</li>
+                                        </ul>
+                                        <div class="salesman-box">
+                                            <ul class="salesman-list-item salesmanbig-list-item"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xpanel-wrapper xpanel-wrapper-2">
+                                    <div class="xpanel">
+                                        <div class="fill-h" id="category-top-five"></div>
+                                        <!-- <div class="fill-h" id="salesman-top-ten"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 中间 -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  fill-h">
+                                <div class="xpanel-wrapper xpanel-wrapper-1">
+                                    <!-- 业务员位置 -->
+                                    <div class="xpanel">
+                                        <div class="fill-h" id="salesman-map"></div>
+                                    </div>
+                                </div>
+                                <!-- 年销售统计 -->
+                                <div class="xpanel-wrapper xpanel-wrapper-4" style="overflow: hidden;">
+                                    <div class="brandbox" style="height:200%; width: 100%;">
+                                        <div class="xpanel" style="height:50%;">
+                                            <div class="fill-h" id="year-sales"></div>
+                                        </div>
+                                        <div class="xpanel" style="height:50%;">
+                                            <div class="fill-h" id="tagOne"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右侧 -->
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  fill-h">
+                                <div class="xpanel-wrapper xpanel-wrapper-2">
+                                    <div class="xpanel">
+                                        <div class="salesman-title">
+                                            <h3>英雄榜(轿车胎)</h3>
+                                        </div>
+                                        <ul class="salesman-list-title">
+                                            <li>排名</li>
+                                            <li>姓名</li>
+                                            <li>当月销售总量</li>
+                                        </ul>
+                                        <div class="salesman-box">
+                                            <ul class="salesman-list-item salesmansmall-list-item"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="xpanel-wrapper xpanel-wrapper-2" style="overflow: hidden;">
+                                    <div class="tagbox" style="height:500%;width: 100%;">
+                                        <div class="xpanel tag-xpanel" style="height:20% ">
+                                            <div class="fill-h" id="tagOneArea"></div>
+                                        </div>
+                                        <div class="xpanel tag-xpanel" style="height:20% ">
+                                            <div class="fill-h" id="tagTwoArea"></div>
+                                        </div>
+                                        <div class="xpanel tag-xpanel" style="height:20% ">
+                                            <div class="fill-h" id="tagThreeArea"></div>
+                                        </div>
+                                        <div class="xpanel tag-xpanel" style="height:20% ">
+                                            <div class="fill-h" id="tagFourArea"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script src="//cdn.polyfill.io/v1/polyfill.min.js" async defer></script> -->
+
+<!-- es6兼容IE浏览器 -->
+<script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xmtKgb7EfHPXFr6HGjvHPlz8H6IBj9Lj"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+<script src="./JS/echarts.min.js"></script>
+<script src="./JS/index.js"></script>
+<script src="./JS/index2.js"></script>
+
+</html>

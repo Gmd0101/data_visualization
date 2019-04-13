@@ -1,0 +1,203 @@
+{
+    "state": "1",
+    "data": [
+        {
+            "tagName": "朝阳小胎",
+            "salesData": [
+                {
+                    "tagSum": "17654",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "汽配",
+            "salesData": [
+                {
+                    "tagSum": "15395",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "RTM米其林",
+            "salesData": [
+                {
+                    "tagSum": "10383",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "朝阳大胎",
+            "salesData": [
+                {
+                    "tagSum": "6445",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "优科豪马",
+            "salesData": [
+                {
+                    "tagSum": "5146",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "新回力",
+            "salesData": [
+                {
+                    "tagSum": "5063",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "迪达小胎",
+            "salesData": [
+                {
+                    "tagSum": "3443",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "米小胎",
+            "salesData": [
+                {
+                    "tagSum": "2655",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "威狮小胎",
+            "salesData": [
+                {
+                    "tagSum": "658",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "雷登小胎",
+            "salesData": [
+                {
+                    "tagSum": "582",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "凯达大胎",
+            "salesData": [
+                {
+                    "tagSum": "517",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "风力大胎",
+            "salesData": [
+                {
+                    "tagSum": "492",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "全诺大胎",
+            "salesData": [
+                {
+                    "tagSum": "405",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "双星轮胎",
+            "salesData": [
+                {
+                    "tagSum": "283",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "德林特小胎",
+            "salesData": [
+                {
+                    "tagSum": "257",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "路航",
+            "salesData": [
+                {
+                    "tagSum": "156",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "劲腾大胎",
+            "salesData": [
+                {
+                    "tagSum": "63",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "倍耐力大胎",
+            "salesData": [
+                {
+                    "tagSum": "36",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "RTM百路驰",
+            "salesData": [
+                {
+                    "tagSum": "36",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "内胎垫带",
+            "salesData": [
+                {
+                    "tagSum": "2",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "钢圈",
+            "salesData": [
+                {
+                    "tagSum": "1",
+                    "month": "01"
+                }
+            ]
+        },
+        {
+            "tagName": "凯达小胎",
+            "salesData": [
+                {
+                    "tagSum": "1",
+                    "month": "01"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" style="width: 600px;height: 600px;border:1px solid red;"></div>
+    <img src="../可视化大屏幕/images/LED-车辆派送.jpg" alt="">
+</body>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xmtKgb7EfHPXFr6HGjvHPlz8H6IBj9Lj"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="./JS/echarts.min.js"></script>
+<script src="./JS/guangdong.js"></script>
+<script>
+    var box = echarts.init(document.getElementById("box"));
+    var option = {
+        title: {
+            text: '全国主要城市空气质量',
+            subtext: 'data from PM25.in',
+            sublink: 'http://www.pm25.in',
+            left: 'center',
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        backgroundColor: '#404a59',
+        visualMap: {
+            min: 0,
+            max: 5000,
+            splitNumber: 5,
+            inRange: {
+                color: ['#d94e5d', '#eac736', '#50a3ba'].reverse()
+            },
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        geo: {
+            map: '广东',
+            label: {
+                emphasis: {
+                    show: false
+                }
+            },
+            roam: true,
+            itemStyle: {
+                normal: {
+                    areaColor: '#323c48',
+                    borderColor: '#111'
+                },
+                emphasis: {
+                    areaColor: '#2a333d'
+                }
+            }
+        },
+        series: [
+            {
+                name: 'AQI',
+                type: 'heatmap',
+                coordinateSystem: 'geo',
+                data: []
+            }
+
+        ]
+    };
+    box.setOption(option);
+
+    function getAllOrders() {
+        $.ajax({
+            type: "get",
+            url: "http://localhost:3000/getCountTopTenCity",
+            dataType: "json",
+            success: function (response) {
+                if (response.countTopTenCity.state == '1') {
+                    var countTopTenCityData = response.countTopTenCity.data;
+                    var orderslist = [];
+                    var ordersGeoCoordMap = {};
+                    countTopTenCityData.forEach(function (item, index) {
+                        orderslist.push({ name: item.city, value: item.sum });
+                    });
+                    //解析地址
+                    var id = 0;
+                    var Geo = new BMap.Geocoder();
+                    function parsingAddress() {
+                        if (id >= countTopTenCityData.length) {
+
+                            var convertData = function (data) {
+                                var res = [];
+                                for (var i = 0; i < data.length; i++) {
+                                    var geoCoord = ordersGeoCoordMap[data[i].name];
+                                    if (geoCoord) {
+                                        res.push(geoCoord.concat(data[i].value));
+                                    }
+                                }
+                                return res;
+                            };
+                            box.setOption({
+                                series: [
+                                    {
+                                        name: 'AQI',
+                                        type: 'heatmap',
+                                        data: convertData(orderslist)
+                                    }
+                                ]
+                            });
+                            return;
+                        }
+                        Geo.getPoint(countTopTenCityData[id].city, function (point) {
+                            if (point) {
+                                ordersGeoCoordMap[countTopTenCityData[id].city] = [point.lng, point.lat];
+                            }
+                            id++;
+                            parsingAddress();
+                        });
+                    }
+                    parsingAddress();
+                }
+            }
+        });
+    }
+    getAllOrders();
+</script>
+
+</html>

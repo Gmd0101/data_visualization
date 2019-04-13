@@ -1,0 +1,107 @@
+{
+    "state": "1",
+    "data": [
+        {
+            "tagName": "朝阳",
+            "salesData": [
+                {
+                    "tagSum": "0",
+                    "month": "01"
+                },
+                {
+                    "tagSum": "96",
+                    "month": "02"
+                },
+                {
+                    "tagSum": "10988",
+                    "month": "03"
+                }
+            ]
+        },
+        {
+            "tagName": "全诺",
+            "salesData": [
+                {
+                    "tagSum": "0",
+                    "month": "01"
+                },
+                {
+                    "tagSum": "0",
+                    "month": "02"
+                },
+                {
+                    "tagSum": "3544",
+                    "month": "03"
+                }
+            ]
+        },
+        {
+            "tagName": "普利司通",
+            "salesData": [
+                {
+                    "tagSum": "0",
+                    "month": "01"
+                },
+                {
+                    "tagSum": "0",
+                    "month": "02"
+                },
+                {
+                    "tagSum": "2282",
+                    "month": "03"
+                }
+            ]
+        },
+        {
+            "tagName": "玛吉斯",
+            "salesData": [
+                {
+                    "tagSum": "0",
+                    "month": "01"
+                },
+                {
+                    "tagSum": "0",
+                    "month": "02"
+                },
+                {
+                    "tagSum": "735",
+                    "month": "03"
+                }
+            ]
+        },
+        {
+            "tagName": "通伊欧",
+            "salesData": [
+                {
+                    "tagSum": "0",
+                    "month": "01"
+                },
+                {
+                    "tagSum": "0",
+                    "month": "02"
+                },
+                {
+                    "tagSum": "708",
+                    "month": "03"
+                }
+            ]
+        },
+        {
+            "tagName": "双星",
+            "salesData": [
+                {
+                    "tagSum": "0",
+                    "month": "01"
+                },
+                {
+                    "tagSum": "0",
+                    "month": "02"
+                },
+                {
+                    "tagSum": "81",
+                    "month": "03"
+                }
+            ]
+        }
+    ]
+}

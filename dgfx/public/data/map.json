@@ -1,0 +1,35 @@
+{
+    "salesmanDistribution":[
+        {"name":"昆明","coordinate":[102.73, 25.04],"salesman":"业务员1","date":"2019-01-08"},
+        {"name":"寿光","coordinate":[118.73, 36.86],"salesman":"业务员1","date":"2019-01-08"},
+        {"name":"盘锦","coordinate":[122.070714, 41.119997],"salesman":"业务员1","date":"2019-01-08"},
+        {"name":"长治","coordinate":[113.08, 36.18],"salesman":"业务员1","date":"2019-01-08"},
+        {"name":"深圳","coordinate":[114.07, 22.62],"salesman":"业务员1","date":"2019-01-08"},
+        {"name":"珠海","coordinate":[113.52, 22.3],"salesman":"业务员1","date":"2019-01-08"},
+        {"name":"宿迁","coordinate":[118.3, 33.96],"salesman":"业务员1","date":"2019-01-08"},
+        {"name":"咸阳","coordinate":[108.72, 34.36],"salesman":"业务员1","date":"2019-01-08"},
+        {"name":"铜川","coordinate":[109.11, 35.09],"salesman":"业务员1","date":"2019-01-08"}
+    ],
+    "ordersDistribution":[
+        {"name":"昆明","coordinate":[102.73, 25.04],"ordernum":50},
+        {"name":"寿光","coordinate":[118.73, 36.86],"ordernum":100},
+        {"name":"盘锦","coordinate":[122.070714, 41.119997],"ordernum":70},
+        {"name":"长治","coordinate":[113.08, 36.18],"ordernum":40},
+        {"name":"深圳","coordinate":[114.07, 22.62],"ordernum":20},
+        {"name":"珠海","coordinate":[113.52, 22.3],"ordernum":50},
+        {"name":"宿迁","coordinate":[118.3, 33.96],"ordernum":70},
+        {"name":"咸阳","coordinate":[108.72, 34.36],"ordernum":30},
+        {"name":"铜川","coordinate":[109.11, 35.09],"ordernum":60}
+    ],
+    "dispatchDistribution":[
+        {"name":"昆明","coordinate":[102.73, 25.04],"car":"车辆1","date":"2019-01-08"},
+        {"name":"寿光","coordinate":[118.73, 36.86],"car":"车辆1","date":"2019-01-08"},
+        {"name":"盘锦","coordinate":[122.070714, 41.119997],"car":"车辆1","date":"2019-01-08"},
+        {"name":"长治","coordinate":[113.08, 36.18],"car":"车辆1","date":"2019-01-08"},
+        {"name":"深圳","coordinate":[114.07, 22.62],"car":"车辆1","date":"2019-01-08"},
+        {"name":"珠海","coordinate":[113.52, 22.3],"car":"车辆1","date":"2019-01-08"},
+        {"name":"宿迁","coordinate":[118.3, 33.96],"car":"车辆1","date":"2019-01-08"},
+        {"name":"咸阳","coordinate":[108.72, 34.36],"car":"车辆1","date":"2019-01-08"},
+        {"name":"铜川","coordinate":[109.11, 35.09],"car":"车辆1","date":"2019-01-08"}
+    ]
+}

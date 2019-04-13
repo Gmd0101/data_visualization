@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" style="height: 400px;width: 800px;border:1px solid red;"></div>
+</body>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xmtKgb7EfHPXFr6HGjvHPlz8H6IBj9Lj"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="./JS/echarts.min.js"></script>
+<script src="./JS/guangdong.js"></script>
+
+
+
+
+
+<script>
+    var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+    var box = echarts.init(document.getElementById("box"));
+    var tagOption = {
+        title: {
+            show: true,
+            text: "",
+            textStyle: {
+                color: "#fff",
+                fontSize: clientWidth / 1080 * 14
+            }
+        },
+        color: ["#22FF7A", "#FF22FF", "#22FFFF", "#FFFF22", "#FFFF22","#FF7A22"],
+        legend: {
+            textStyle: {
+                // color: "#fff"
+            },
+            data: [],
+            borderColor: "red"
+        },
+        grid: {
+            left: "10%",
+            right: "5%",
+            bottom: "15%"
+        },
+        // color: "#fff",
+        // tooltip: {
+        //     trigger: "axis",
+        //     axisPointer: {
+        //         type: 'shadow'
+        //     }
+        // },
+        //x轴设置
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#02238E'
+                }
+            },
+            axisLabel: {
+                color: "#fff",
+                fontSize: clientWidth / 1080 * 8
+            },
+            splitLine: {
+                show: false,
+                lineStyle: {
+                    color: '#000'
+                }
+            },
+            data: []
+        },
+        //y轴设置
+        yAxis: {
+            type: 'value',
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#02238e'
+                }
+            },
+            axisLabel: {
+                color: "#fff",
+                fontSize: clientWidth / 1080 * 8
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#02238E'
+                }
+            },
+        },
+        series: []
+    };
+    box.setOption(tagOption);
+
+
+    var tagsMonthData = [];
+    function getTagsMonth() {
+        $.ajax({
+            type: "get",
+            url: "http://localhost:3000/getCountTagMonthOutStore",
+            dataType: "json",
+            success: function (res) {
+                if (res.state == '1') {
+                    var legendData = [], xAxisData = [];
+                    tagsMonthData = res.data;
+
+                    tagsMonthData.forEach(function (item, index) {
+                        legendData.push(item.tagName);
+                    });
+                    //设置x轴
+                    if (tagsMonthData.length > 0) {
+                        tagsMonthData[0].salesData.forEach(function (item, index) {
+                            xAxisData.push(item.month);
+                        });
+                    }
+                    var series = [];
+                    var colorData = ["#22FF7A", "#FF22FF", "#22FFFF", "#FFFF22", "#FFFF22","#FF7A22"];
+                    for (var i = 0; i < tagsMonthData.length; i++) {
+                        series.push({
+                            name: tagsMonthData[i].tagName,
+                            type: "line",
+                            lineStyle: {
+                                color: colorData[i]
+                            },
+                            data: []
+                        });
+                        for (var j = 0; j < tagsMonthData[i].salesData.length; j++) {
+                            series[i].data.push(tagsMonthData[i].salesData[j].tagSum);
+                        }
+                    }
+
+                    console.log(series.length);
+                    box.setOption({
+                        legend: {
+                            data: legendData
+                        },
+                        xAxis: {
+                            data: xAxisData
+                        },
+                        series: series
+                    });
+                    console.log(tagsMonthData);
+                }
+            }
+        });
+    }
+    getTagsMonth();
+</script>
+
+
+
+
+
+
+</html>

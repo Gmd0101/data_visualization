@@ -1,0 +1,24 @@
+{
+    "monthsales":[
+        {"date":"12/1","salesnum":800},
+        {"date":"12/2","salesnum":700},
+        {"date":"12/3","salesnum":200},
+        {"date":"12/4","salesnum":500},
+        {"date":"12/5","salesnum":1000},
+        {"date":"12/6","salesnum":550},
+        {"date":"12/7","salesnum":660},
+        {"date":"12/8","salesnum":210},
+        {"date":"12/9","salesnum":300},
+        {"date":"12/10","salesnum":1100},
+        {"date":"12/11","salesnum":800},
+        {"date":"12/12","salesnum":400},
+        {"date":"12/13","salesnum":700},
+        {"date":"12/14","salesnum":100},
+        {"date":"12/15","salesnum":50},
+        {"date":"12/16","salesnum":100},
+        {"date":"12/17","salesnum":900},
+        {"date":"12/18","salesnum":880},
+        {"date":"12/19","salesnum":400}
+    ]
+
+}

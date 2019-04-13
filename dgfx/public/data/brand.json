@@ -1,0 +1,10 @@
+{
+    "brand":[
+        {"brandname":"米其林","salesnum":2000},
+        {"brandname":"邓禄普","salesnum":1000},
+        {"brandname":"普利司通","salesnum":800},
+        {"brandname":"固特异","salesnum":600},
+        {"brandname":"马牌","salesnum":300},
+        {"brandname":"其他","salesnum":500}
+    ]
+}
